@@ -1,0 +1,31 @@
+{
+  "name": "Midnight Rose",
+  "version": "1.0.0",
+  "description": "Pastel Goth & Kawaii Dark Mode theme with deep plum canvas, dusty rose borders, and baby pink accents.",
+  "mode": "dark",
+  "accent": "#f285ad",
+  "accentColor": "#f285ad",
+  "baseColors": {
+    "dark": {
+      "background": "#140d18",
+      "text": "#f0e8f2",
+      "card": "#281b2a",
+      "border": "#a05978",
+      "muted": "#8a768e"
+    },
+    "light": {
+      "background": "#fff5f8",
+      "text": "#2a1b2b",
+      "card": "#ffecf2",
+      "border": "#f285ad",
+      "muted": "#966f88"
+    }
+  },
+  "radius": "high",
+  "radiusScale": "high",
+  "fontScale": 1.0,
+  "uiScale": 1.0,
+  "glass": true,
+  "glassEffect": true,
+  "characterAware": false
+}

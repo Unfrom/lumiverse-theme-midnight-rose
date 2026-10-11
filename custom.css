@@ -1,0 +1,194 @@
+/* ========================================================
+   Midnight Rose (Pastel Goth / Kawaii Dark) Theme for Lumiverse
+   Matching the cozy dark plum, dusty rose & baby pink Discord theme
+   ======================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&family=Quicksand:wght@500;600;700&display=swap');
+
+:root {
+  /* Core Lumiverse Color Variables */
+  --lumiverse-bg: #140d18;
+  --lumiverse-bg-secondary: #1d1222;
+  --lumiverse-card: #281b2a;
+  --lumiverse-card-secondary: #201323;
+  --lumiverse-card-hover: #332036;
+  --lumiverse-border: #a05978;
+  --lumiverse-border-subtle: rgba(160, 89, 120, 0.4);
+  --lumiverse-accent: #f285ad;
+  --lumiverse-accent-hover: #ff9ebb;
+  --lumiverse-accent-subtle: rgba(242, 133, 173, 0.18);
+  --lumiverse-text: #f0e8f2;
+  --lumiverse-text-dim: #9f8ba3;
+  --lumiverse-text-muted: #8a768e;
+  --lumiverse-fill-subtle: #211425;
+  --lumiverse-input-bg: #1f1223;
+
+  /* Theme-specific tokens */
+  --mr-bg: #140d18;
+  --mr-bubble-other: #281b2a;
+  --mr-bubble-user: #351f38;
+  --mr-border: #a05978;
+  --mr-accent: #f285ad;
+  --mr-text-main: #f0e8f2;
+  --mr-text-muted: #8a768e;
+}
+
+/* Background Canvas with Subtle Floating Heart Watermark */
+body, #app, #root, .lumiverse-app, main {
+  background-color: #140d18 !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='70' viewBox='0 0 70 70'%3E%3Cpath d='M35 48 C35 48 22 37 15 29 C8 21 11 12 18 12 C23.5 12 30 16.5 35 22 C40 16.5 46.5 12 52 12 C59 12 62 21 55 29 C48 37 35 48 35 48 Z' fill='%23f285ad' fill-opacity='0.045'/%3E%3C/svg%3E") !important;
+  background-repeat: repeat !important;
+  background-attachment: fixed !important;
+  color: #f0e8f2 !important;
+  font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+/* Headings and Titles */
+h1, h2, h3, h4, h5, h6, .font-heading {
+  color: #f0e8f2 !important;
+  font-weight: 700 !important;
+}
+
+/* Chat Message Speech Bubbles */
+.chat-message,
+.message-bubble,
+[data-message-role],
+.prose-chat,
+.chat-entry {
+  border-radius: 18px !important;
+  border: 1px solid rgba(160, 89, 120, 0.45) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35) !important;
+  backdrop-filter: blur(10px) !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* Character / Incoming Messages */
+.chat-message:not(.user-message),
+.chat-message[data-role="assistant"],
+.chat-message[data-role="bot"],
+.message-incoming {
+  background-color: #281b2a !important;
+  border-color: rgba(160, 89, 120, 0.45) !important;
+  color: #f0e8f2 !important;
+}
+
+/* User / Outgoing Messages */
+.chat-message.user-message,
+.chat-message[data-role="user"],
+.message-outgoing {
+  background-color: #351f38 !important;
+  border-color: rgba(242, 133, 173, 0.6) !important;
+  color: #ffffff !important;
+}
+
+/* Composer / Chat Input Bar (Pill Shape) */
+.chat-input-container,
+.chat-input-bar,
+textarea.chat-input,
+input[type="text"].chat-input,
+.composer-input,
+[data-element="composer"] {
+  background-color: #1f1223 !important;
+  border: 1px solid rgba(160, 89, 120, 0.5) !important;
+  border-radius: 28px !important;
+  color: #f0e8f2 !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4) !important;
+}
+
+.chat-input-container:focus-within,
+textarea.chat-input:focus,
+input[type="text"].chat-input:focus {
+  border-color: #f285ad !important;
+  box-shadow: 0 0 0 3px rgba(242, 133, 173, 0.25) !important;
+  outline: none !important;
+}
+
+/* Badges and Tags */
+.badge-pill,
+.role-badge,
+.tag-badge,
+.badge {
+  background-color: #2b1b31 !important;
+  border: 1px solid rgba(160, 89, 120, 0.5) !important;
+  color: #f0e8f2 !important;
+  border-radius: 9999px !important;
+  padding: 2px 10px !important;
+  font-size: 0.8rem !important;
+}
+
+/* Unread Divider with NEW ♥ Badge */
+.unread-divider,
+.new-messages-bar {
+  border-top: 1px solid #f285ad !important;
+  position: relative !important;
+  margin: 18px 0 !important;
+}
+
+.unread-divider::after,
+.new-messages-bar::after {
+  content: "NEW ♥";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f285ad;
+  color: #140d18;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 1px 10px;
+  border-radius: 9999px;
+  letter-spacing: 0.05em;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+/* Buttons */
+button.primary-btn,
+.btn-primary,
+button[data-variant="primary"] {
+  background: linear-gradient(135deg, #f285ad 0%, #db6591 100%) !important;
+  color: #140d18 !important;
+  font-weight: 600 !important;
+  border: none !important;
+  border-radius: 20px !important;
+  box-shadow: 0 2px 8px rgba(242, 133, 173, 0.3) !important;
+  transition: all 0.2s ease !important;
+}
+
+button.primary-btn:hover,
+.btn-primary:hover,
+button[data-variant="primary"]:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 14px rgba(242, 133, 173, 0.45) !important;
+  filter: brightness(1.08) !important;
+}
+
+/* Panels and Modals */
+.modal-content,
+.dialog-content,
+.card-panel,
+.drawer-panel,
+aside {
+  background-color: #1d1222 !important;
+  border: 1px solid rgba(160, 89, 120, 0.4) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Custom Minimalist Rose Scrollbars */
+::-webkit-scrollbar {
+  width: 7px !important;
+  height: 7px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #542e43 !important;
+  border-radius: 10px !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a05978 !important;
+}
