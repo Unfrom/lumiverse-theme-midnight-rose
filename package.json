@@ -1,0 +1,15 @@
+{
+  "name": "lumiverse-theme-midnight-rose",
+  "version": "1.0.0",
+  "description": "Midnight Rose (Pastel Goth) Kawaii Dark Mode Theme for Lumiverse Spindle",
+  "type": "module",
+  "scripts": {
+    "build:backend": "esbuild src/backend.ts --bundle --outfile=dist/backend.js --format=esm --target=es2022 --platform=node",
+    "build:frontend": "esbuild src/frontend.ts --bundle --outfile=dist/frontend.js --format=esm --target=es2022 --platform=browser",
+    "build": "npm run build:backend && npm run build:frontend"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "typescript": "^7.0.2"
+  }
+}

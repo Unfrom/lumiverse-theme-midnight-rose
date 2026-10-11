@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0",
+  "name": "Midnight Rose (Pastel Goth Theme)",
+  "identifier": "midnight_rose_theme",
+  "author": "Goldie & Un",
+  "description": "A cozy kawaii dark-mode theme featuring deep plum canvas, dusty mauve bubble borders, heart watermark patterns, and pastel pink accents.",
+  "permissions": [],
+  "requested_capabilities": [],
+  "entry_backend": "dist/backend.js",
+  "entry_frontend": "dist/frontend.js",
+  "minimum_lumiverse_version": "0.1.0"
+}
